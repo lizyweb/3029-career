@@ -1,0 +1,248 @@
+:root {
+  --brand: #e8c51d;
+  --body: #516171;
+  --border: rgba(0,0,0,0.08);
+  --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+.s-one {
+  font-size: 32px;
+  /* color: var(--brand); */
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.s-one::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: black;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.s-one::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--brand);
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+/*** Section Title ***/
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  top: 50%;
+  left: -45px;
+  margin-top: -1px;
+  background: var(--brand);
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  top: 50%;
+  right: -45px;
+  margin-top: -1px;
+  background: var(--brand);
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+  display: none;
+}
+
+
+/*Slider*/
+
+.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, .1);
+  z-index: 1;
+}
+.carousel-item img{
+  filter: brightness(50%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+}
+/* .carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--brand);
+} */
+
+@media (max-width: 768px) {
+  #header-carousel .carousel-item {
+      position: relative;
+      min-height: 450px;
+  }
+  
+  #header-carousel .carousel-item img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+.carousel-caption .btn{
+  color: white;
+  background-color: var(--brand);
+  border: 2px solid var(--brand);
+}
+.carousel-caption .btn:hover{
+  color: var(--brand);
+  background-color: transparent;
+  border: 2px solid var(--brand);
+}
+
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
+  padding: 40px;
+  background: #fff;
+  height: 100%;
+}
+
+.services .service-item .icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.services .service-item .icon i {
+  color: var(--body);
+  font-size: 40px;
+  transition: ease-in-out 0.3s;
+  z-index: 2;
+  position: relative;
+  line-height: 1.8;
+}
+
+.services .service-item .icon:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #f0f1f2;
+  border-radius: 50px;
+  z-index: 1;
+  top: 10px;
+  right: -15px;
+  transition: 0.3s;
+}
+
+.services .service-item h3 {
+  color: var(--body);
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 4px solid #ebebed;
+  transition: 0.3s;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .service-item .readmore {
+  margin-top: 15px;
+  display: inline-block;
+  color: var(--brand);
+}
+
+.services .service-item:hover .icon:before {
+  background: var(--brand);
+}
+
+.services .service-item:hover h3 {
+  border-color: var(--brand);
+}
+
+.section-bg {
+  background-color: #f5f6f7;
+}
+.service-box-title:hover {
+  color: #ffb600;
+}
+
+
+/* Image section */
+
+
+#call-to-action {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/imgs/img3.jpg) center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.img-content{
+  max-width: 600px;
+}
+
+#call-to-action h3 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+#call-to-action p {
+  color: #fff;
+}
+
+
+@media (max-width: 768px){
+  .img-content h6{
+    font-size: 14px;
+  }
+  #call-to-action h3 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
